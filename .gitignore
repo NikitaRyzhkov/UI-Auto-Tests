@@ -1,5 +1,5 @@
-/target/
-src/main/java/utils/user_data.json
+target
+build
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
