@@ -1,5 +1,6 @@
 target
 build
+allure-results
 src/main/java/utils/user_data.json
 ### IntelliJ IDEA ###
 .idea/modules.xml
