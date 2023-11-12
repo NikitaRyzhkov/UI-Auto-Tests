@@ -1,8 +1,8 @@
-src/main/java/utils/user_data.json
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+src/main/java/utils/user_data.json
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
