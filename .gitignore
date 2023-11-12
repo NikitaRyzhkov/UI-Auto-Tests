@@ -1,6 +1,6 @@
 target
 build
-
+src/main/java/utils/user_data.json
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
