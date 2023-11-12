@@ -9,7 +9,7 @@
 ![image](https://github.com/NikitaRyzhkov/UI-Auto-Tests/assets/121218999/f9112a09-58d1-4c68-88f6-23fa34314307)
 
 ### main
-В пакете pages находятся Page objects, содержашие Selenide elements  и методы взаимодействия с ними.
+В пакете pages находятся Page objects, содержащие Selenide elements  и методы взаимодействия с ними.
 
 В пакете elements находятся Page element objects, а именно объекты характеризующие отдельные элементы страницы, например, LeftMenuElement - левого бокового меню.
 
