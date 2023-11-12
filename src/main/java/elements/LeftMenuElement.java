@@ -1,6 +1,7 @@
 package elements;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -26,13 +27,15 @@ public class LeftMenuElement {
     public void clickAppsCollapseBtn(){
         appsCollapseBtn.click();
     }
-
+    @Step
     public void clickUserCalendarBtn(){
         userCalendarBtn.click();
     }
+    @Step
     public void clickEventBtn(){
         eventBtn.click();
     }
+    @Step
     public void clickCalendarActionsBtn(){
         calendarActionsBtn.click();
     }
@@ -40,19 +43,24 @@ public class LeftMenuElement {
     /**
      * Кнопка скрыта. Перед нажатием на поле наводится курсор
      */
+    @Step
     public void clickCalendarSettingsBtn(){
         customCalendarLine.hover();
         calendarSettingsBtn.click();
     }
+    @Step
     public void clickHideMiniCalendarBtn(){
         hideMiniCalendarBtn.click();
     }
+    @Step
     public void clickNextMonthBtn(){
         nextMonthBtn.click();
     }
+    @Step
     public void clickMiniCalendarSlot(String day){
         $(byText(day)).click();
     }
+    @Step
     public void clickTimeZoneBtn(){
         timeZoneBtn.click();
     }
