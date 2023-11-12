@@ -1,5 +1,6 @@
 import elements.CalendarElement;
 import elements.LeftMenuElement;
+import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -13,6 +14,8 @@ import static com.codeborne.selenide.Condition.visible;
 
 public class LeftMenuTest extends SignIn {
 
+
+    @Description("Выключить отображение персонального календаря. Ожидание: появление поп-ап")
     @Test
     public void turnOffCalendar(){
         LeftMenuElement leftMenuElement = new LeftMenuElement();
@@ -20,6 +23,7 @@ public class LeftMenuTest extends SignIn {
         leftMenuElement.popupCalendar.shouldBe(visible);
         leftMenuElement.clickUserCalendarBtn();
     }
+    @Description("Создать событие с помощью кнопки в боковом меню. Ожидание: появление события в календаре")
     @Test
     public void createEvent(){
         LeftMenuElement menuElement = new LeftMenuElement();
@@ -31,6 +35,7 @@ public class LeftMenuTest extends SignIn {
         eventPage.clickSaveBtn();
         calendarElement.randomEvent.shouldBe(visible);
     }
+    @Description("Нажать кнопку \"+\". Ожидание: отображение выпадающего меню")
     @Test
     public void calendarActionsMenu(){
         LeftMenuElement menuElement = new LeftMenuElement();
@@ -38,6 +43,7 @@ public class LeftMenuTest extends SignIn {
         menuElement.calendarDropDownMenu.shouldBe(visible);
         menuElement.appsList.click();
     }
+    @Description("Нажать кнопку \"три точки\". Ожидание: отображение выпадающего меню, наличие пункта \"Поделиться\"")
     @Test
     public void calendarSettingsMenu(){
         LeftMenuElement menuElement = new LeftMenuElement();
@@ -46,6 +52,7 @@ public class LeftMenuTest extends SignIn {
         menuElement.shareOption.shouldBe(visible);
         menuElement.appsList.click();
     }
+    @Description("Скрыть и развернуть мини календарь")
     @Test
     public void hideNShowMiniCalendar(){
         LeftMenuElement menuElement = new LeftMenuElement();
@@ -56,6 +63,7 @@ public class LeftMenuTest extends SignIn {
         menuElement.clickHideMiniCalendarBtn();
         menuElement.miniCalendar.shouldBe(visible);
     }
+    @Description("Изменить отображаемый месяц на мини календаре")
     @Test
     public void changeMonth(){
         LeftMenuElement menuElement = new LeftMenuElement();
@@ -68,6 +76,7 @@ public class LeftMenuTest extends SignIn {
         softAssert.assertNotEquals(menuElement.firstSlotMiniCalendar.getText(),currentSlot);
         softAssert.assertAll();
     }
+    @Description("Выбрать другой день на мини календаре. Ожидание: на основном календаре изменился период")
     @Test
     public void miniCalendarSlot(){
         LeftMenuElement menuElement = new LeftMenuElement();
@@ -79,6 +88,7 @@ public class LeftMenuTest extends SignIn {
         Assert.assertTrue(days.contains(slot));
 
     }
+    @Description("Нажать кнопку изменения часового пояса. Ожидание: открытие окна \"Часовой пояс\"")
     @Test
     public void timeZone(){
         LeftMenuElement menuElement = new LeftMenuElement();
