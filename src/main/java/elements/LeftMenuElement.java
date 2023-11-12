@@ -8,14 +8,14 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class LeftMenuElement {
     private final SelenideElement appsCollapseBtn = $(".zmCollapseLhs"),
-            userCalendarBtn = $(".zmTreeNode"),
-            eventBtn = $x("//span[normalize-space(.)='Новое событие']//.."),
-            calendarActionsBtn = $(".zmTreeTIcon"),
-            calendarSettingsBtn = $x("//div/i[@class=\"zcli-menu\"]"),
-            customCalendarLine = $(".zmTreeNode"),
-            hideMiniCalendarBtn = $(".zcl_W20"),
-            nextMonthBtn = $(".zcl_W20 svg"),
-            timeZoneBtn = $(byText("Europe/Moscow"));
+                                  userCalendarBtn = $(".zmTreeNode"),
+                                  eventBtn = $x("//span[normalize-space(.)='Новое событие']//.."),
+                                  calendarActionsBtn = $(".zmTreeTIcon"),
+                                  calendarSettingsBtn = $x("//div/i[@class=\"zcli-menu\"]"),
+                                  customCalendarLine = $(".zmTreeNode"),
+                                  hideMiniCalendarBtn = $(".zcl_W20"),
+                                  nextMonthBtn = $(".zcl_W20 svg"),
+                                  timeZoneBtn = $(byText("Europe/Moscow"));
     public final SelenideElement appsList = $("ul.zmApps"),
                                  popupCalendar = $(".menubutton"),
                                  calendarDropDownMenu = $(".zmdd--main"),
